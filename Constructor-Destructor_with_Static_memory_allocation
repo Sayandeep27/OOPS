@@ -1,0 +1,44 @@
+#include<iostream>
+using namespace std;
+
+
+class Student{
+    
+  public:
+  
+      string name;
+      int roll;
+  
+     Student(string name,int roll)
+     {
+         cout<<"Constructor is called"<<endl;
+         
+         this->name=name;
+         this->roll=roll;
+     }
+     
+     void show()
+     {
+         cout<<"name: "<<name<<endl;
+         cout<<"roll: "<<roll<<endl;
+     }
+     
+     
+     ~Student()
+     {
+         cout<<"Destructor is called"<<endl;
+     }
+    
+    
+};
+
+
+int main()
+{
+    Student s1("Sayandeep",23);
+    
+    s1.show();
+    
+    
+    return 0;
+}

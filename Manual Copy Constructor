@@ -1,0 +1,47 @@
+#include<iostream>
+using namespace std;
+
+class Student{
+    
+  public:
+  
+     string name;
+     int roll;
+     
+     
+     Student(string name,int roll)   
+     {
+         this->name=name;
+         this->roll=roll;
+     }
+     
+     
+     Student(Student &obj)    // Manual Copy Constructor
+     {
+         this->name=obj.name;
+         this->roll=obj.roll;
+     }
+     
+    
+     
+     void display()
+     {
+         cout<<"name: "<<name<<endl;
+         cout<<"roll: "<<roll<<endl;
+     }
+     
+    
+};
+
+
+int main()
+{
+
+     Student s1("Sayandeep",23);
+     s1.display();
+     
+     Student s2(s1); 
+     s2.display();
+    
+    return 0;
+}

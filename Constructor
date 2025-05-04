@@ -1,0 +1,51 @@
+#include<iostream>
+using namespace std;
+
+class Student{
+    
+  public:
+  
+     string name;
+     int roll;
+     
+     Student()  // non-parameterized constructor
+     {
+         name="NULL";
+         roll=0;
+     }
+     
+     
+     Student(string name,int roll)   // parameterized constructor
+     {
+         this->name=name;
+         this->roll=roll;
+     }
+     
+     
+     void display()
+     {
+         cout<<"name: "<<name<<endl;
+         cout<<"roll: "<<roll<<endl;
+     }
+     
+    
+};
+
+
+int main()
+{
+
+     Student s1("Sayandeep",23);
+     s1.display();
+     
+     Student s2;
+     s2.display();
+     
+     
+     // if we want we can create object dynamically as well
+     Student* s3=new Student("Tanmay",23);
+     s3->display();
+    
+    
+    return 0;
+}

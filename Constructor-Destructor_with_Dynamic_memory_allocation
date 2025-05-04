@@ -1,0 +1,52 @@
+#include<iostream>
+using namespace std;
+
+
+class Student{
+    
+  public:
+  
+    string name;
+    int roll;
+  
+    Student(string name,int roll)
+    {
+        this->name=name;
+        this->roll=roll;
+        
+        cout<<"Constructor is called"<<endl;
+    }
+    
+    
+    void show()
+    {
+        cout<<"name: "<<name<<endl;
+        cout<<"roll: "<<roll<<endl;
+    }
+    
+    
+    ~Student()
+    {
+        cout<<"Destructor is called"<<endl;
+    }
+  
+    
+    
+};
+
+
+int main()
+{
+
+    
+    Student* s2=new Student("Sayandeep",23);
+    
+    s2->show();
+    
+    
+    delete s2;  // destructor is called only when we explicitly delete the object in case of dynamic memory allocation
+    
+    
+    
+    return 0;
+}

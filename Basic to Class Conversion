@@ -1,0 +1,36 @@
+#include<iostream>
+using namespace std;
+
+
+class Number{
+    public:
+    
+       int val;
+    
+       Number(int val)
+       {
+           this->val=val;
+       }
+       
+       void display()
+       {
+           cout<<val<<endl;
+       }
+    
+    
+};
+
+
+int main()
+{
+    // basic to class conversion
+    
+    int val=10;
+    
+    Number n(val);
+    
+    n.display();
+    
+    
+    return 0;
+}
